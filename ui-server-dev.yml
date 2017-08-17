@@ -1,0 +1,20 @@
+refresh:
+  token:
+    cookie:
+      age: 2592000
+oauth:
+  client:
+    credentials: admin:admin
+proxy:
+  context:
+    path: ${proxy.path:/dev/ui/}
+mc:
+  context:
+    path: ${mc.path:/dev}
+  api:
+    path: ${${mc.context.path}/api:/dev/api}
+zuul:
+  routes:
+    oauth:
+      path: ${ui.oauth.filter.path:/oauth/**}
+      url: ${oauth.server.api:http://localhost:8889/api/oauth}

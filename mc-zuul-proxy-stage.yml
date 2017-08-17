@@ -1,0 +1,11 @@
+zuul:
+  forceOriginalQueryStringEncoding: true
+  routes:
+    api:
+      path: /api/**
+      url: http://localhost:9000
+
+    config:
+      path: /test/**
+      url: http://localhost:8888
+

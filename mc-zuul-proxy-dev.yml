@@ -1,0 +1,25 @@
+zuul:
+  routes: 
+    dev-remaining-api:
+      path: /dev/api/**
+      sensitiveHeaders: 
+      url: http://10.0.2.78
+      
+    stage-remaining-api:
+      path: /stage/api/**
+      url: http://34.251.158.179
+      
+    dev-auth:
+      path: /dev/auth/**
+      sensitiveHeaders: 
+      url: http://10.0.2.148
+      
+    stage-auth:
+      path: /stage/auth/**
+      url: http://10.0.2.37
+    
+    ui-dev:
+      path: /dev/ui/**
+      url: http://uidev.murabahaclub.com
+      sensitiveHeaders:
+   
